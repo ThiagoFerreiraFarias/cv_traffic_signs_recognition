@@ -1,0 +1,21 @@
+﻿  vc.c
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(439,36): warning C4013: 'getValueByThreshold' undefined; assuming extern returning int
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(480,78): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(481,110): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(482,29): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(527,78): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(528,110): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(529,29): warning C4098: 'vc_binary_erode': 'void' function returning a value
+  Source.cpp
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall cv::Mat::Mat(void)" (??0Mat@cv@@QAE@XZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall cv::Mat::~Mat(void)" (??1Mat@cv@@QAE@XZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: class cv::Mat & __thiscall cv::Mat::operator=(class cv::Mat &&)" (??4Mat@cv@@QAEAAV01@$$QAV01@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "class cv::Mat __cdecl cv::imread(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (?imread@cv@@YA?AVMat@1@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: __thiscall cv::VideoCapture::VideoCapture(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (??0VideoCapture@cv@@QAE@ABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: virtual __thiscall cv::VideoCapture::~VideoCapture(void)" (??1VideoCapture@cv@@UAE@XZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: virtual bool __thiscall cv::VideoCapture::isOpened(void)const " (?isOpened@VideoCapture@cv@@UBE_NXZ) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "public: virtual bool __thiscall cv::VideoCapture::read(class cv::debug_build_guard::_OutputArray const &)" (?read@VideoCapture@cv@@UAE_NABV_OutputArray@debug_build_guard@2@@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "int __cdecl cv::waitKey(int)" (?waitKey@cv@@YAHH@Z) referenced in function _main
+Source.obj : error LNK2019: unresolved external symbol "void __cdecl cv::imshow(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::debug_build_guard::_InputArray const &)" (?imshow@cv@@YAXABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@ABV_InputArray@debug_build_guard@1@@Z) referenced in function _main
+C:\opencv\build\x64\vc15\lib\opencv_world452.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\Debug\VisaoComputadorPlacas.exe : fatal error LNK1120: 10 unresolved externals

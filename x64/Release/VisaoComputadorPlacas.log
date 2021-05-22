@@ -1,0 +1,12 @@
+﻿  vc.c
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(246,69): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(286,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(439,36): warning C4013: 'getValueByThreshold' undefined; assuming extern returning int
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(480,78): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(481,110): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(482,29): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(527,78): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(528,110): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\trabalho_1\P1\vc.c(529,29): warning C4098: 'vc_binary_erode': 'void' function returning a value
+  Source.cpp
+D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\Source.cpp(3,10): fatal error C1083: Cannot open include file: 'opencv2\opencv.hpp': No such file or directory

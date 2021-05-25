@@ -65,16 +65,6 @@ typedef struct PairCoordinate {
 	int eixoXend;
 	int eixoYstart;
 	int eixoYend;
-
-	int q1b;
-	int q2b;
-	int q3b;
-	int q4b;
-
-	int q1p;
-	int q2p;
-	int q3p;
-	int q4p;
 } Coord;
 
 IVC* vc_image_new(int width, int height, int channels, int levels);
@@ -160,7 +150,11 @@ void vc_gray_to_binary(IVC* src, int threshold);
  * @param kernelDilate int -> tamanho do kernel a ser aplicado na operacao de dilatacao
  * @return void
  */
-int vc_binary_open(IVC* src, IVC* dst, int kernelErode, int kernelDilate);
+int vc_binary_open(IVC* src, int kernelErode, int kernelDilate);
+
+
+int vc_binary_close(IVC* src, int kernelErode, int kernelDilate);
+
 
 /**
  * @brief operação morfologica de erosao. Reduz tamanho e elimina excessos atraves da conversao dos valores
@@ -239,3 +233,7 @@ float vc_rgb_max(int r, int g, int b);
 float vc_rgb_min(int r, int g, int b);
 
 int vc_rgb_to_hsv2(IVC* srcdst);
+
+int analyzesQuadrants(IVC* src, OVC blobs, int segmentColor);
+
+int getSignType(float percQ1, float percQ2, float percQ3, float percQ4,int segmentColor);

@@ -448,18 +448,23 @@ int getVectorSize(IVC* src) {
 	return src->width * src->height * src->channels;
 }
 
-void vc_binary_close(IVC* src, IVC* dst, int kernelErode, int kernelDilate) {
-	IVC* destImageErode = vc_image_new(src->width, src->height, 1, 255);
-	vc_binary_dilate(src, destImageErode, kernelDilate);
-	vc_binary_erode(destImageErode, dst, kernelErode);
-}
 
-int vc_binary_open(IVC* src, IVC* dst, int kernelErode, int kernelDilate) {
+int vc_binary_open(IVC* src, int kernelErode, int kernelDilate) {
 	IVC* destImageDilate = vc_image_new(src->width, src->height, 1, 255);
 
 	vc_binary_erode(src, destImageDilate, kernelErode);
 
-	vc_binary_dilate(destImageDilate, dst, kernelDilate);
+	vc_binary_dilate(destImageDilate, src, kernelDilate);
+
+	return 1;
+}
+
+int vc_binary_close(IVC* src, int kernelErode, int kernelDilate) {
+	IVC* destImageErode = vc_image_new(src->width, src->height, 1, 255);
+	
+	vc_binary_dilate(src, destImageErode, kernelErode);
+
+	vc_binary_erode(destImageErode, src, kernelDilate);
 
 	return 1;
 }
@@ -598,8 +603,8 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 	int x, y, a, b;
 	long int i, size;
 	long int posX, posA, posB, posC, posD;
-	int labeltable[256] = { 0 };
-	int labelarea[256] = { 0 };
+	int labeltable[5000] = { 0 };
+	int labelarea[5000] = { 0 };
 	int label = 1; // Etiqueta inicial.
 	int num, tmplabel;
 	OVC* blobs; // Apontador para array de blobs (objectos) que sera retornado desta funcao.
@@ -661,6 +666,7 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 					if ((datadst[posA] == 0) && (datadst[posB] == 0) && (datadst[posC] == 0) && (datadst[posD] == 0))
 					{
 						datadst[posX] = label;
+						//printf("\nlabel teste 1 %d", labeltable[label]);
 						labeltable[label] = label;
 						label++;
 					}
@@ -748,6 +754,7 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 
 				if (datadst[posX] != 0)
 				{
+					//printf("\nlabel teste 2 %d", labeltable[datadst[posX]]);
 					datadst[posX] = labeltable[datadst[posX]];
 				}
 			}
@@ -761,6 +768,8 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 		{
 			for (b = a + 1; b < label; b++)
 			{
+				//printf("\nlabel teste 3 %d", labeltable[b]);
+				//printf("\nlabel teste 4 %d", labeltable[a]);
 				if (labeltable[a] == labeltable[b]) labeltable[b] = 0;
 			}
 		}
@@ -770,6 +779,7 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 		{
 			if (labeltable[a] != 0)
 			{
+				//printf("\nlabel teste 5 %d", labeltable[a]);
 				labeltable[*nlabels] = labeltable[a]; // Organiza tabela de etiquetas
 				(*nlabels)++; // Conta etiquetas
 			}
@@ -782,8 +792,14 @@ OVC* vc_binary_blob_labelling(IVC* src, IVC* dst, int* nlabels)
 		blobs = (OVC*)calloc((*nlabels), sizeof(OVC));
 
 		if (blobs != NULL)
-		{
-			for (a = 0; a < (*nlabels); a++) blobs[a].label = labeltable[a];
+		{	
+			
+			for (a = 0; a < (*nlabels); a++) {
+				if (labeltable[a] != 0 && labeltable[a] != NULL) {
+					blobs[a].label = labeltable[a];
+				}
+				//printf("\nfinal label%d", labeltable[a]);
+			}
 		}
 		else return NULL;
 
@@ -911,38 +927,76 @@ Coord* drawBlobBox(IVC* src, OVC blobs, int nblobs) {
 		int distX = blobs.width * 2;
 		int distY = blobs.height * 2;
 
-		int q1b = 0;
-		int q1p = 0;
-		int q2b = 0;
-		int q2p = 0;
 
 		for (int line = 0; line < src->height; line++) {
 			for (int column = 0; column <= src->width; column++) {
 				int pos = line * src->bytesperline + column * src->channels;
+				int pos_minus1 = (line-1) * src->bytesperline + (column-1) * src->channels;
+				int pos_minus2 = (line-1) * src->bytesperline + (column-1) * src->channels;
 				if (line >= eixoYstart && line <= eixoYend) {
-					if ((column == eixoXstart || column == eixoXend) && distY >= 0) src->data[pos] = 255;
-					if (column == cmX) src->data[pos] = 255;
+					if ((column == eixoXstart || column == eixoXend) && distY >= 0) {
+						src->data[pos] = 75;
+						src->data[pos + 1] = 247;
+						src->data[pos+2] = 49;	
+						
+						src->data[pos_minus1] = 75;
+						src->data[pos_minus1 + 1] = 247;
+						src->data[pos_minus1 +2] = 49;
 
-					//contar se o pixel é branco ou preto
-					src->data[pos]==255 ? q1b++ : q1p++;
+						src->data[pos_minus2] = 75;
+						src->data[pos_minus2 + 1] = 247;
+						src->data[pos_minus2 +2] = 49;
+					}
+					if (column == cmX) {
+						int pos_plus1 = (line + 1) * src->bytesperline + (column + 1) * src->channels;
+						
+						src->data[pos] = 199;
+						src->data[pos + 1] = 0;
+						src->data[pos + 2] = 255;
 
+						src->data[pos_minus1] = 199;
+						src->data[pos_minus1 + 1] = 0;
+						src->data[pos_minus1 + 2] = 255;
+
+						src->data[pos_plus1] = 199;
+						src->data[pos_plus1 + 1] = 0;
+						src->data[pos_plus1 + 2] = 255;
+					}
 				}
 				if (column >= eixoXstart && column <= eixoXend) {
-					if ((line == eixoYstart || line == eixoYend) && distX >= 0) src->data[pos] = 255;
-					if (line == cmY) src->data[pos] = 255;
+					if ((line == eixoYstart || line == eixoYend) && distX >= 0) {
+						src->data[pos] = 75;
+						src->data[pos + 1] = 247;
+						src->data[pos + 2] = 49;
 
-					//contar se o pixel é branco ou preto
-					src->data[pos]==255 ? q2b++ : q2p++;
+						src->data[pos_minus1] = 75;
+						src->data[pos_minus1 + 1] = 247;
+						src->data[pos_minus1 + 2] = 49;
+
+						src->data[pos_minus2] = 75;
+						src->data[pos_minus2 + 1] = 247;
+						src->data[pos_minus2 + 2] = 49;
+					}
+					if (line == cmY) {
+
+						int pos_plus1 = (line + 1) * src->bytesperline + (column + 1) * src->channels;
+
+						src->data[pos] = 199;
+						src->data[pos + 1] = 0;
+						src->data[pos + 2] = 255;
+
+						src->data[pos_minus1] = 199;
+						src->data[pos_minus1 + 1] = 0;
+						src->data[pos_minus1 + 2] = 255;
+
+						src->data[pos_plus1] = 199;
+						src->data[pos_plus1 + 1] = 0;
+						src->data[pos_plus1 + 2] = 255;
+					}
 				}
 			}
 		}
 
-		coordinates->q1b = q1b;
-		coordinates->q1p = q1p;
-		coordinates->q2b = q1b;
-		coordinates->q2p = q2p;
-
-	
 	return coordinates;
 }
 
@@ -1113,6 +1167,183 @@ int vc_rgb_to_hsv2(IVC* srcdst) {
 
 	return 1;
 }
+
+int analyzesQuadrants(IVC* src, OVC blobs, int segmentColor) {
+
+
+	int eixoXstart = blobs.x;
+	int eixoXend = blobs.width + eixoXstart;
+	int eixoYstart = blobs.y;
+	int eixoYend = blobs.height + eixoYstart;
+
+	int cmX = blobs.xc;
+	int cmY = blobs.yc;
+
+	int q1b = 0;
+	int q2b = 0;
+	int q3b = 0;
+	int q4b = 0;
+
+	for (int line = 0; line < src->height; line++) {
+		for (int column = 0; column <= src->width; column++) {
+			int pos = line * src->bytesperline + column * src->channels;
+		
+			if (line >= eixoYstart && line <= eixoYend && column >= eixoXstart && column <= eixoXend) {
+				//primeiro quadrante
+				if (column <= cmX && line <= cmY) {
+					if (src->data[pos] == 255) {
+						q1b++;
+					}
+				}
+				//segundo quadrante
+				else if (column <= cmX && line > cmY) {
+					if (src->data[pos] == 255) {
+						q2b++;
+						
+					}
+				}
+				//terceiro quadrante
+				else if (column > cmX && line <= cmY) {
+					if (src->data[pos] == 255) {
+						q3b++;
+						;
+					}
+				}
+				//quarto quadrante
+				else {
+					if (src->data[pos] == 255) {
+						q4b++;
+					}
+				}
+			}
+		}
+	}
+
+	int widthQ1 = cmX - eixoXstart;
+	int heigthQ1 = cmY - eixoYstart;
+	int dimQ1 = widthQ1 * heigthQ1;
+
+	int widthQ2 = cmX - eixoXstart;
+	int heigthQ2 = eixoYend - cmY;
+	int dimQ2 = widthQ2 * heigthQ2;
+
+	int widthQ3 = eixoXend - cmX;
+	int heigthQ3 = cmY - eixoYstart;
+	int dimQ3 = widthQ3 * heigthQ3;
+
+	int widthQ4 = eixoXend - cmX;
+	int heigthQ4 = eixoYend - cmY;
+	int dimQ4 = widthQ4 * heigthQ4;
+
+	float ratioQ1 = (float)q1b / dimQ1;
+	float ratioQ2 = (float)q2b / dimQ2;
+	float ratioQ3 = (float)q3b / dimQ3;
+	float ratioQ4 = (float)q4b / dimQ4;
+
+	return getSignType(ratioQ1, ratioQ2, ratioQ3, ratioQ4, segmentColor);
+}
+
+
+//Analisa apenas as placas azuis
+int getSignType(float percQ1, float percQ2, float percQ3, float percQ4, int segmentColor) {
+
+	float minRatioLimit = 0.85;
+	float maxRatioLimit = 1.15;
+
+	if (segmentColor == 0) {
+
+		//Forbidden
+		float ratioQ1Forbidden = percQ1 / 0.30;
+		float ratioQ2Forbidden = percQ2 / 0.30;
+		float ratioQ3Forbidden = percQ3 / 0.30;
+		float ratioQ4Forbidden = percQ4 / 0.30;
+
+		if (ratioQ1Forbidden >= minRatioLimit && ratioQ1Forbidden <= maxRatioLimit &&
+			ratioQ2Forbidden >= minRatioLimit && ratioQ2Forbidden <= maxRatioLimit &&
+			ratioQ3Forbidden >= minRatioLimit && ratioQ3Forbidden <= maxRatioLimit &&
+			ratioQ4Forbidden >= minRatioLimit && ratioQ4Forbidden <= maxRatioLimit
+			) return 5;
+
+
+		//Stop
+		float ratioQ1Stop = percQ1 / 0.24;
+		float ratioQ2Stop = percQ2 / 0.22;
+		float ratioQ3Stop = percQ3 / 0.26;
+		float ratioQ4Stop = percQ4 / 0.24;
+
+		if (ratioQ1Stop >= minRatioLimit && ratioQ1Stop <= maxRatioLimit &&
+			ratioQ2Stop >= minRatioLimit && ratioQ2Stop <= maxRatioLimit &&
+			ratioQ3Stop >= minRatioLimit && ratioQ3Stop <= maxRatioLimit &&
+			ratioQ4Stop >= minRatioLimit && ratioQ4Stop <= maxRatioLimit
+			) return 6;
+	}
+	else {
+		//ARROW LEFT
+		float ratioQ1ArrowLeft = percQ1 / 0.38;
+		float ratioQ2ArrowLeft = percQ2 / 0.38;
+		float ratioQ3ArrowLeft = percQ3 / 0.31;
+		float ratioQ4ArrowLeft = percQ4 / 0.31;
+
+
+		//ARROW RIGHT
+		float ratioQ1ArrowRight = percQ1 / 0.31;
+		float ratioQ2ArrowRight = percQ2 / 0.31;
+		float ratioQ3ArrowRight = percQ3 / 0.38;
+		float ratioQ4ArrowRight = percQ4 / 0.38;
+
+		int moreLeft = 0;
+		int moreRight = 0;
+
+		ratioQ1ArrowLeft < ratioQ1ArrowRight ? moreLeft++ : moreRight++;
+		ratioQ2ArrowLeft < ratioQ2ArrowRight ? moreLeft++ : moreRight++;
+		ratioQ3ArrowLeft < ratioQ3ArrowRight ? moreLeft++ : moreRight++;
+		ratioQ4ArrowLeft < ratioQ4ArrowRight ? moreLeft++ : moreRight++;
+
+		//ARROW LEFT
+		if (ratioQ1ArrowLeft >= minRatioLimit && ratioQ1ArrowLeft <= maxRatioLimit &&
+			ratioQ2ArrowLeft >= minRatioLimit && ratioQ2ArrowLeft <= maxRatioLimit &&
+			ratioQ3ArrowLeft >= minRatioLimit && ratioQ3ArrowLeft <= maxRatioLimit &&
+			ratioQ4ArrowLeft >= minRatioLimit && ratioQ4ArrowLeft <= maxRatioLimit &&
+			moreLeft>=moreRight
+			) return 1;
+
+		//ARROW RIGHT
+		if (ratioQ1ArrowRight >= minRatioLimit && ratioQ1ArrowRight <= maxRatioLimit &&
+			ratioQ2ArrowRight >= minRatioLimit && ratioQ2ArrowRight <= maxRatioLimit &&
+			ratioQ3ArrowRight >= minRatioLimit && ratioQ3ArrowRight <= maxRatioLimit &&
+			ratioQ4ArrowRight >= minRatioLimit && ratioQ4ArrowRight <= maxRatioLimit &&
+			moreRight >= moreLeft
+			) return 2;
+
+		//CAR
+		float ratioQ1Car = percQ1 / 0.20;
+		float ratioQ2Car = percQ2 / 0.24;
+		float ratioQ3Car = percQ3 / 0.21;
+		float ratioQ4Car = percQ4 / 0.25;
+
+		if (ratioQ1Car >= minRatioLimit && ratioQ1Car <= maxRatioLimit &&
+			ratioQ2Car >= minRatioLimit && ratioQ2Car <= maxRatioLimit &&
+			ratioQ3Car >= minRatioLimit && ratioQ3Car <= maxRatioLimit &&
+			ratioQ4Car >= minRatioLimit && ratioQ4Car <= maxRatioLimit
+			) return 3;
+
+		//HIGHWAY
+		float ratioQ1highway = percQ1 / 0.15;
+		float ratioQ2highway = percQ2 / 0.35;
+		float ratioQ3highway = percQ3 / 0.14;
+		float ratioQ4highway = percQ4 / 0.35;
+
+		if (ratioQ1highway >= minRatioLimit && ratioQ1highway <= maxRatioLimit &&
+			ratioQ2highway >= minRatioLimit && ratioQ2highway <= maxRatioLimit &&
+			ratioQ3highway >= minRatioLimit && ratioQ3highway <= maxRatioLimit &&
+			ratioQ4highway >= minRatioLimit && ratioQ4highway <= maxRatioLimit
+			) return 4;
+
+	}
+
+	return -1;
+}
+
 
 
 #pragma endregion LIB_DESENVOLVIDA_ALUNOS

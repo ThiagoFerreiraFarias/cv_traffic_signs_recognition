@@ -1,44 +1,9 @@
 ﻿  Source.cpp
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.h(21,1): warning C4005: 'MAX': macro redefinition
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.h(21,1): warning C4005: 'MAX': macro redefinition
 C:\opencv\build\include\opencv2\core\cvdef.h(489): message : see previous definition of 'MAX'
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.h(22,1): warning C4005: 'MIN': macro redefinition
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.h(22,1): warning C4005: 'MIN': macro redefinition
 C:\opencv\build\include\opencv2\core\cvdef.h(485): message : see previous definition of 'MIN'
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\Source.cpp(37,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\Source.cpp(203,182): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  vc.c
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(246,70): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(286,66): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(439,37): warning C4013: 'getValueByThreshold' undefined; assuming extern returning int
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(480,78): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(481,110): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(482,29): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(527,78): warning C4098: 'vc_binary_erode': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(528,110): warning C4098: 'vc_binary_erode': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(529,29): warning C4098: 'vc_binary_erode': 'void' function returning a value
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(894,53): warning C4029: declared formal parameter list different from definition
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(961,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(961,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(961,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(962,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(962,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(962,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(974,38): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(974,43): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(961,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(962,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(985,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(988,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1000,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1002,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1005,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1008,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1025,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1026,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1027,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1075,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1075,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1075,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1076,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1076,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\VisaoComputadorPlacas\vc.c(1076,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-  VisaoComputadorPlacas.vcxproj -> D:\NB25223\Desktop\c\Trabalho2\VisaoComputadorPlacas\x64\Debug\VisaoComputadorPlacas.exe
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(37,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(260,185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(261,162): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+  VisaoComputadorPlacas.vcxproj -> D:\NB25223\Desktop\c\T2_openCV\x64\Debug\VisaoComputadorPlacas.exe

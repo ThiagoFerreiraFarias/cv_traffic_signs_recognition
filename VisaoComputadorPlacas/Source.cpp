@@ -44,11 +44,11 @@ int main(void) {
 
 	Mat frame;
 	
-	VideoCapture vid(0);
+	/*VideoCapture vid(0);*/
 
-	//char videofile[28] = "slides_signs.mp4";
-	//cv::VideoCapture vid;
-	//vid.open(videofile);
+	char videofile[28] = "slides_signs_all_static.mp4";
+	cv::VideoCapture vid;
+	vid.open(videofile);
 	vid.set(3, frameWidth);
 	vid.set(4, frameHeight);
 
@@ -153,13 +153,8 @@ int main(void) {
 		
 
 		int kernelErode = video.height <720 ? 3 : 7;
-
-		//vc_binary_open(segmentedImageOneChanellRed, kernel, kernel);
-		//vc_binary_open(segmentedImageOneChanellBlue, kernel, kernel);
-		//vc_binary_open(segmentedImageRed, kernel, kernel);
-		//vc_binary_close(segmentedImageBlue, kernel, kernel);
-		vc_binary_close(segmentedImageOneChanellBlue, kernelErode, kernelErode);
-		//vc_binary_erode(segmentedImageOneChanellBlue, segmentedImageOneChanellBlueClose, kernelErode);
+		
+		vc_binary_close(segmentedImageOneChanellBlue, kernelErode, kernelErode);	
 
 
 		for (int x = 0; x < vectorSize; x += 1) {
@@ -184,11 +179,11 @@ int main(void) {
 
 
 
-		//memcpy(frame_3.data, imageRedIsolated->data, video.width * video.height * 3);
+		memcpy(frame_3.data, segmentedImageRed->data, video.width * video.height * 3);
 		memcpy(frame_4.data, segmentedImageBlue->data, video.width * video.height * 3);
 
-		//imshow("frame_3", frame_3);
-		imshow("frame_4", frame_4);
+		imshow("canal vermelho", frame_3);
+		imshow("canal azul", frame_4);
 		//imshow("HSV2", imgHsv);
 		//imshow("maskRed", maskRed);
 		//imshow("maskBlue", maskBlue);

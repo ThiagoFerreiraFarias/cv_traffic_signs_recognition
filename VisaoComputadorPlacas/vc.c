@@ -1247,6 +1247,7 @@ int analyzesQuadrants(IVC* src, OVC blobs, int segmentColor) {
 //Analisa apenas as placas azuis
 int getSignType(float percQ1, float percQ2, float percQ3, float percQ4, int segmentColor) {
 
+
 	float minRatioLimit = 0.85;
 	float maxRatioLimit = 1.15;
 

@@ -181,11 +181,11 @@ int main(void) {
 		memcpy(frame_3.data, segmentedImageRed->data, video.width * video.height * 3);
 		memcpy(frame_4.data, segmentedImageBlue->data, video.width * video.height * 3);
 
-		imshow("frame_3", frame_3);
-		imshow("frame_4", frame_4);
-		imshow("HSV2", imgHsv);
-		imshow("maskRed", maskRed);
-		imshow("maskBlue", maskBlue);
+		imshow("canal vermelho", frame_3);
+		imshow("canal azul", frame_4);
+		//imshow("HSV2", imgHsv);
+		//imshow("maskRed", maskRed);
+		//imshow("maskBlue", maskBlue);
 
 		
 		const int SIZE = 2;

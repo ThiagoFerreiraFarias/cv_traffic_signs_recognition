@@ -4,6 +4,6 @@ C:\opencv\build\include\opencv2\core\cvdef.h(489): message : see previous defini
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.h(22,1): warning C4005: 'MIN': macro redefinition
 C:\opencv\build\include\opencv2\core\cvdef.h(485): message : see previous definition of 'MIN'
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(37,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(260,185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(261,162): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(254,185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(255,162): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   VisaoComputadorPlacas.vcxproj -> D:\NB25223\Desktop\c\T2_openCV\x64\Debug\VisaoComputadorPlacas.exe

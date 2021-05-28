@@ -882,7 +882,7 @@ int vc_binary_blob_info(IVC* src, OVC* blobs, int nblobs)
 		blobs[i].yc = sumy / MAX(blobs[i].area, 1);
 	}
 
-	printBlobsInfo(blobs, nblobs);
+	//printBlobsInfo(blobs, nblobs);
 
 	return 1;
 }
@@ -1247,8 +1247,8 @@ int analyzesQuadrants(IVC* src, OVC blobs, int segmentColor) {
 //Analisa apenas as placas azuis
 int getSignType(float percQ1, float percQ2, float percQ3, float percQ4, int segmentColor) {
 
-	float minRatioLimit = 0.85;
-	float maxRatioLimit = 1.15;
+	float minRatioLimit = 0.80;
+	float maxRatioLimit = 1.2;
 
 	if (segmentColor == 0) {
 

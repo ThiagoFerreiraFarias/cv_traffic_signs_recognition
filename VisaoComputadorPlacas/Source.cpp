@@ -27,8 +27,8 @@ int redHmin = 108, redSmin = 151, redVmin = 135;
 int redHmax = 127, redSmax = 255, redVmax = 255;
 
 //Para filtragem de azul
-int blueHmin = 0, blueSmin = 24, blueVmin = 111;
-int blueHmax = 23, blueSmax = 255, blueVmax = 255;
+int blueHmin = 0, blueSmin = 24, blueVmin = 20;
+int blueHmax = 26, blueSmax = 255, blueVmax = 255;
 
 //tools box para ajustar o kernel
 int threshouldOne = 50;
@@ -44,11 +44,11 @@ int main(void) {
 
 	Mat frame;
 	
-	VideoCapture vid(0);
+	//VideoCapture vid(0);
 
-	//char videofile[28] = "slides_signs.mp4";
-	//cv::VideoCapture vid;
-	//vid.open(videofile);
+	char videofile[28] = "Opencv.mp4";
+	cv::VideoCapture vid;
+	vid.open(videofile);
 	vid.set(3, frameWidth);
 	vid.set(4, frameHeight);
 
@@ -154,13 +154,7 @@ int main(void) {
 
 		int kernelErode = video.height <720 ? 3 : 7;
 
-		//vc_binary_open(segmentedImageOneChanellRed, kernel, kernel);
-		//vc_binary_open(segmentedImageOneChanellBlue, kernel, kernel);
-		//vc_binary_open(segmentedImageRed, kernel, kernel);
-		//vc_binary_close(segmentedImageBlue, kernel, kernel);
 		vc_binary_close(segmentedImageOneChanellBlue, kernelErode, kernelErode);
-		//vc_binary_erode(segmentedImageOneChanellBlue, segmentedImageOneChanellBlueClose, kernelErode);
-
 
 		for (int x = 0; x < vectorSize; x += 1) {
 			int segmentPost = x * 3;
@@ -184,14 +178,14 @@ int main(void) {
 
 
 
-		//memcpy(frame_3.data, imageRedIsolated->data, video.width * video.height * 3);
+		memcpy(frame_3.data, segmentedImageRed->data, video.width * video.height * 3);
 		memcpy(frame_4.data, segmentedImageBlue->data, video.width * video.height * 3);
 
-		//imshow("frame_3", frame_3);
+		imshow("frame_3", frame_3);
 		imshow("frame_4", frame_4);
-		//imshow("HSV2", imgHsv);
-		//imshow("maskRed", maskRed);
-		//imshow("maskBlue", maskBlue);
+		imshow("HSV2", imgHsv);
+		imshow("maskRed", maskRed);
+		imshow("maskBlue", maskBlue);
 
 		
 		const int SIZE = 2;
@@ -237,7 +231,7 @@ int main(void) {
 			vc_binary_blob_info(vectorImageOut[segm], vectorblob[segm], numLabels);
 
 			for (int position = 0; position < numLabels; position++) {
-				if (vectorblob[segm][position].area >10000) {
+				if (vectorblob[segm][position].area >5000) {
 					Coord* coord = drawBlobBox(imageBoundingBoxes, vectorblob[segm][position]);
 					coordChannelVector[areaPosition] = coord;
 					coordChannelColor[areaPosition] = segm == 0 ? "Cor Vermelha" : "Cor Azul";
@@ -270,7 +264,7 @@ int main(void) {
 		//show other parts of the process
 
 
-		waitKey(fps);
+		waitKey(fps/100);
 		
 	}
 	

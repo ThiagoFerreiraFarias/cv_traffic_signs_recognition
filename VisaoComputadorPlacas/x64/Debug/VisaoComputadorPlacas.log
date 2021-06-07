@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿  Source.cpp
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.h(21,1): warning C4005: 'MAX': macro redefinition
 C:\opencv\build\include\opencv2\core\cvdef.h(489): message : see previous definition of 'MAX'
@@ -7,70 +6,67 @@ C:\opencv\build\include\opencv2\core\cvdef.h(485): message : see previous defini
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(37,17): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(254,185): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\Source.cpp(255,162): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-  VisaoComputadorPlacas.vcxproj -> D:\NB25223\Desktop\c\T2_openCV\x64\Debug\VisaoComputadorPlacas.exe
-=======
-﻿  vc.c
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(246,70): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(286,66): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(439,37): warning C4013: 'getValueByThreshold' undefined; assuming extern returning int
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(485,78): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(486,110): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(487,29): warning C4098: 'vc_binary_dilate': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(532,78): warning C4098: 'vc_binary_erode': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(533,110): warning C4098: 'vc_binary_erode': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(534,29): warning C4098: 'vc_binary_erode': 'void' function returning a value
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(798,52): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(910,53): warning C4029: declared formal parameter list different from definition
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1015,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1015,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1015,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1016,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1016,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1016,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1028,38): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1028,43): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1015,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1016,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1039,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1042,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1054,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1056,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1059,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1062,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1079,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1080,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1081,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1129,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1129,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1129,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1130,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1130,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1130,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1251,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1252,1): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1257,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1258,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1259,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1260,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1270,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1271,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1272,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1273,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1283,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1284,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1285,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1286,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1290,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1291,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1292,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1293,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1320,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1321,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1322,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1323,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1332,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1333,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1334,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Asus\source\repos\cv_traffic_signs_recognition\VisaoComputadorPlacas\vc.c(1335,1): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  VisaoComputadorPlacas.vcxproj -> C:\Users\Asus\Source\Repos\cv_traffic_signs_recognition\x64\Debug\VisaoComputadorPlacas.exe
->>>>>>> 8c4a3cb09f6d1df4c2a2ca5f196e1b46a68b8ad6
+  vc.c
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(246,70): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(286,66): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(439,37): warning C4013: 'getValueByThreshold' undefined; assuming extern returning int
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(485,78): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(486,110): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(487,29): warning C4098: 'vc_binary_dilate': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(532,78): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(533,110): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(534,29): warning C4098: 'vc_binary_erode': 'void' function returning a value
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(798,52): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(910,53): warning C4029: declared formal parameter list different from definition
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1015,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1015,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1015,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1016,27): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1016,34): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1016,40): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1028,38): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1028,43): warning C4244: 'function': conversion from 'int' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1015,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1016,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1039,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1042,52): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1054,41): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1056,49): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1059,46): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1062,47): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1079,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1080,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1081,1): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1129,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1129,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1129,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1130,25): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1130,28): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1130,31): warning C4244: 'function': conversion from 'float' to 'int', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1250,1): error C2143: syntax error: missing ';' before '<<'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1253,1): error C2143: syntax error: missing ';' before '=='
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1256,8): error C2374: 'maxRatioLimit': redefinition; multiple initialization
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1252): message : see declaration of 'maxRatioLimit'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1257,1): error C2143: syntax error: missing ';' before '>>'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1257,9): error C2059: syntax error: 'bad suffix on number'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1267,24): error C2065: 'ratioQ1Forbidden': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1267,41): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1267,61): error C2065: 'ratioQ1Forbidden': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1268,38): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1269,38): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1270,38): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1280,36): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1281,33): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1282,33): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1283,33): error C2065: 'minRatioLimit': undeclared identifier
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1256,2): warning C4305: 'initializing': truncation from 'double' to 'float'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1263,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1264,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1265,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1275,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1276,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1277,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1278,2): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1286,2): error C2059: syntax error: 'else'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1350,2): error C2059: syntax error: 'return'
+D:\NB25223\Desktop\c\T2_openCV\VisaoComputadorPlacas\vc.c(1351,1): error C2059: syntax error: '}'
